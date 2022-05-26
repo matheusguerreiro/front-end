@@ -4,13 +4,14 @@ const ModalContext = createContext()
 
 export const ModalContextProvider = ({children}) => {
   const [show, setShow] = useState(false)
+  const [type, setType] = useState('')
 
-  const toggleShow = () => {
+  const changeShow = () => {
     setShow(!show)
   }
 
   return (
-    <ModalContext.Provider value={{show, toggleShow}}>
+    <ModalContext.Provider value={{show, changeShow, type, setType}}>
       {children}
     </ModalContext.Provider>
   )

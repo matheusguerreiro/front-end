@@ -20,11 +20,6 @@ function reducer(state, action) {
         if (marker.id === action.id) marker.draggable = true
         return marker
       })
-      // return state.map((marker) => {
-      //   marker.draggable = action.draggable
-      //   if (marker.id === action.id) marker.draggable = true
-      //   return marker
-      // })
     case 'rm':
       return [...state.filter((marker) => (
         marker.draggable !== true

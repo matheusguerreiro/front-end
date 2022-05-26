@@ -11,7 +11,7 @@ import moveOn from '../../icons/Regular=off, Move=on.svg'
 
 const MyMarker = () => {
 
-  const {state, dispatch, setSelect} = useMarker()
+  const {state, dispatch} = useMarker()
 
   const handleClick = (id, draggable) => {
     dispatch({type: 'change', id: id, draggable: draggable})

@@ -40,6 +40,7 @@ const Map = () => {
           center={center}
           options={mapOptions}
         >
+          <Modal />
           <MyPolygon />
           <MyMarker />
           <Buttons />

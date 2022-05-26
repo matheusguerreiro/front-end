@@ -1,9 +1,6 @@
 // sass
 import './buttons.sass'
 
-// uuid4
-import { v4 as uuid4 } from 'uuid'
-
 // icons
 import pin from '../../icons/Pin.svg'
 import trash from '../../icons/Trash.svg'
@@ -19,9 +16,9 @@ const Buttons = () => {
   const handleAdd = () => {
     let today = new Date()
     const marker = {
-      id: uuid4(),
+      id: Math.random(),
       position: {lat: center.lat, lng: center.lng},
-      date: `${today.getDay()+22}/${today.getMonth() + 1}/${today.getFullYear()} - ${today.getHours()}:${today.getMinutes()}`,
+      date: `${(today.getDay()+22) < 10 ? ('0'+(today.getDay())) : (today.getDay()+22)}/${(today.getMonth() + 1) < 10 ? ('0'+(today.getMonth()+1)) : (today.getMonth()+1)}/${today.getFullYear()} - ${today.getHours() < 10 ? ('0'+(today.getHours())) : (today.getHours())}:${today.getMinutes() < 10 ? ('0'+(today.getMinutes())) : (today.getMinutes())}`,
       draggable: false
     }
     dispatch({ type: 'add', payload: marker })
@@ -31,8 +28,8 @@ const Buttons = () => {
     dispatch({type: 'rmAll'})
   }
 
-  const handleRm = () => {
-    dispatch({type: 'rm'})
+  const handleRm = (id) => {
+    dispatch({type: 'rm', payload: id})
   }
 
   return (

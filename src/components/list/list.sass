@@ -1,14 +1,28 @@
+@mixin mobile
+  @media (max-width: 540px)
+    @content
+
+@mixin tablet
+  @media (max-width: 768px)
+    @content
+
 .list
   width: 344px
-  max-height: 500px
+  max-height: 424px
   overflow-y: auto
   position: absolute
-  top: 16px
+  top: 47px
   left: 16px
   display: flex
   flex-direction: column
   background-color: #fff
-  border-radius: 8px
+  border-radius: 0px 0px 8px 8px
+
+  @include tablet
+    max-height: 213px
+
+  @include mobile
+    max-height: 107px
 
   .listHeader
     background-color: #20252b
@@ -17,6 +31,10 @@
     font-size: 12px
     line-height: 12px
     border-radius: 8px 8px 0px 0px
+    position: fixed
+    top: 95px
+    width: 344px
+    z-index: 2
 
   .listMain
     display: flex

@@ -11,19 +11,24 @@ import json from '../data/Talhao.json'
 function reducer(state, action) {
   switch (action.type) {
     case 'add':
-      return [...state, action.payload]
+      return [...state, action.marker]
     case 'rmAll':
       return []
     case 'change':
-      return state.map((marker) => {
-        marker.draggable = false
-        if (marker.id === action.payload) {
-          marker.draggable = true
-        }
+      return state.filter((marker) => {
+        marker.draggable = action.draggable
+        if (marker.id === action.id) marker.draggable = true
         return marker
       })
+      // return state.map((marker) => {
+      //   marker.draggable = action.draggable
+      //   if (marker.id === action.id) marker.draggable = true
+      //   return marker
+      // })
     case 'rm':
-      return [...state.filter((marker) => marker.draggable !== true)]
+      return [...state.filter((marker) => (
+        marker.draggable !== true
+      ))]
     default:
       return state
   }

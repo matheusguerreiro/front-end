@@ -12,6 +12,7 @@ import MyPolygon from '../myPolygon/MyPolygon';
 import MyMarker from '../myMarker/MyMarker';
 import Buttons from '../buttons/Buttons';
 import List from '../list/List';
+import Modal from '../modal/Modal';
 
 
 const Map = () => {

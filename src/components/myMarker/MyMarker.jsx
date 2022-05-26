@@ -5,25 +5,25 @@ import { Marker } from "@react-google-maps/api"
 import { useMarker } from "../../context/MarkerContext"
 
 // icons
-import regularOn from '../../icons/Regular=on, Move=off.svg'
-import regularOff from '../../icons/Regular=off, Move=on.svg'
+import moveOff from '../../icons/Regular=on, Move=off.svg'
+import moveOn from '../../icons/Regular=off, Move=on.svg'
 
 
 const MyMarker = () => {
 
-  const {state, dispatch} = useMarker()
+  const {state, dispatch, setSelect} = useMarker()
 
-  const handleClick = (id) => {
-    dispatch({type: 'change', payload: id})
+  const handleClick = (id, draggable) => {
+    dispatch({type: 'change', id: id, draggable: draggable})
   }
 
   return (
-    state.map((marker, i) => (
+    state.map((marker) => (
       <Marker 
         position={marker.position}
         onClick={() => handleClick(marker.id)}
         key={marker.id}
-        icon={marker.draggable ? regularOff : regularOn}
+        icon={marker.draggable ? moveOn : moveOff}
         draggable={marker.draggable}
       />
     ))

@@ -24,12 +24,17 @@ const Map = () => {
 
   const {center} = useMarker()
   
+  const google = window.google
+  if (!google) {
+    return null
+  }
+
   const mapOptions = {
     disableDefaultUI: true,
     zoomControl: true,
+    zoomControlOptions: {position: google.maps.ControlPosition.RIGHT_TOP},
     mapTypeId: "satellite"
   }
-
   
   return (
     <div className='map'>

@@ -69,6 +69,10 @@
         font-size: 12px
         line-height: 12px
 
+    .contentS
+      @extend .content
+      background-color: #F5F6FA
+
     .content2
       // background-color: lightgreen
       // border-top: 2px solid #d9dbe0
@@ -81,3 +85,5 @@
       color: #556476
       font-size: 12px
       line-height: 12px
+      @include mobile
+        padding: 16px 30px

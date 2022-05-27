@@ -21,7 +21,7 @@ const MyMarker = () => {
     state.map((marker) => (
       <Marker 
         position={marker.position}
-        onClick={() => handleClick(marker.id)}
+        onClick={() => handleClick(marker.id, marker.draggable)}
         key={marker.id}
         icon={marker.draggable ? moveOn : moveOff}
         draggable={marker.draggable}

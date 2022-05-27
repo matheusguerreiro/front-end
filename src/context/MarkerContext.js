@@ -16,8 +16,8 @@ function reducer(state, action) {
       return []
     case 'change':
       return state.filter((marker) => {
-        marker.draggable = action.draggable
-        if (marker.id === action.id) marker.draggable = true
+        marker.draggable = marker.dF
+        if (marker.id === action.id) marker.draggable = !action.draggable
         return marker
       })
     case 'rm':

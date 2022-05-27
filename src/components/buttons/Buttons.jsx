@@ -50,13 +50,16 @@ const Buttons = () => {
   return (
     <div className="buttonsDiv">
       {select && <button className='red' onClick={modalRm}>
-        Deletar Pin <img src={trash} alt="" />
+        <span className='default'>Deletar Pin <img src={trash} alt="" /></span>
+        <span className='min'>Del Pin <img src={trash} alt="" /></span>
       </button>}
       <button onClick={handleAdd}>
-        Adicionar Novo <img src={pin} alt="" />
+        <span className="default">Adicionar Novo <img src={pin} alt="" /></span>
+        <span className="min">Add Novo <img src={pin} alt="" /></span>
       </button>
       {state.length > 0 && <button className='red' onClick={modalRmAll}>
-        Deletar Todos <img src={trash} alt="" />
+        <span className="default">Deletar Todos <img src={trash} alt="" /></span>
+        <span className="min">Del Todos <img src={trash} alt="" /></span>
       </button>}
     </div>
   )

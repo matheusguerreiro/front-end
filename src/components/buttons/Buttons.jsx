@@ -6,8 +6,8 @@ import pin from '../../icons/Pin.svg'
 import trash from '../../icons/Trash.svg'
 
 // context
-import { useMarker } from '../../context/MarkerContext'
-import { useModal } from '../../context/ModalContext'
+import { useMarker } from '../../context/markerContext'
+import { useModal } from '../../context/modalContext'
 
 
 const Buttons = () => {

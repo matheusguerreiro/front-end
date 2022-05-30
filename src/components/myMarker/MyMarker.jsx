@@ -2,7 +2,7 @@
 import { Marker } from "@react-google-maps/api"
 
 // context
-import { useMarker } from "../../context/MarkerContext"
+import { useMarker } from "../../context/markerContext"
 
 // icons
 import moveOff from '../../icons/Regular=on, Move=off.svg'

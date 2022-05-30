@@ -6,8 +6,8 @@ import Header from './components/header/Header';
 import Map from './components/pages/Map';
 
 // context
-import { MarkerContextProvider } from './context/MarkerContext';
-import { ModalContextProvider } from './context/ModalContext';
+import { MarkerContextProvider } from './context/markerContext';
+import { ModalContextProvider } from './context/modalContext';
 
 
 function App() {

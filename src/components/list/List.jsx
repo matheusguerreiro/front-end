@@ -2,7 +2,7 @@
 import './list.sass'
 
 // context
-import { useMarker } from '../../context/MarkerContext'
+import { useMarker } from '../../context/markerContext'
 
 // icon
 import cultureIcon from '../../icons/Culture Icon.svg'

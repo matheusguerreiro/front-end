@@ -2,7 +2,7 @@
 import { Polygon } from "@react-google-maps/api"
 
 // context
-import { useMarker } from "../../context/MarkerContext"
+import { useMarker } from "../../context/markerContext"
 
 
 const polygonOptions = {

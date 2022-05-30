@@ -5,7 +5,7 @@ import './map.sass'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 // context
-import { useMarker } from '../../context/MarkerContext'
+import { useMarker } from '../../context/markerContext'
 
 // components
 import MyPolygon from '../myPolygon/MyPolygon';

@@ -2,8 +2,8 @@
 import './modal.sass'
 
 // context
-import { useMarker } from '../../context/MarkerContext'
-import { useModal } from '../../context/ModalContext'
+import { useMarker } from '../../context/markerContext'
+import { useModal } from '../../context/modalContext'
 
 
 const Modal = () => {

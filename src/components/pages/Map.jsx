@@ -19,7 +19,7 @@ const Map = () => {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyB0M6YIG2aL58gl58imsjigAgsfU0dTrp0"
+    googleMapsApiKey: ""
   })
 
   const {center} = useMarker()

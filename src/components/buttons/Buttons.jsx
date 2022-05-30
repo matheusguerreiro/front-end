@@ -12,12 +12,12 @@ import { useModal } from '../../context/ModalContext'
 
 const Buttons = () => {
 
-  const {state, dispatch, center /* select, setSelect */} = useMarker()
+  const {state, dispatch, center, /* select, setSelect */} = useMarker()
   const {changeShow, setType} = useModal()
 
   const handleAdd = () => {
     let today = new Date()
-      let day = (today.getDay()+22) < 10 ? ('0'+(today.getDay())) : (today.getDay()+22)
+      let day = (today.getDate()) < 10 ? ('0'+(today.getDate())) : (today.getDate())
       let month = (today.getMonth()+1) < 10 ? ('0'+(today.getMonth()+1)) : (today.getMonth()+1)
       let year = today.getFullYear()
         let hours = today.getHours() < 10 ? ('0'+(today.getHours())) : (today.getHours())

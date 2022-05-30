@@ -40,7 +40,7 @@ const center = calculateCenter(polygonCoordinates)
 
 export const MarkerContextProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const [select, setSelect] = useState(null)
+  const [select, setSelect] = useState(false)
 
   return (
     <MarkerContext.Provider value={{state, dispatch, center, polygonCoordinates, select, setSelect}}>

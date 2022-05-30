@@ -21,8 +21,8 @@ const List = () => {
         {state.length > 0 ?
           state.map((marker, i) => (
             <div key={marker.id} className={marker.draggable ? 'contentS' : 'content'}>
-              {/* {state.length < 10 ? <p><img src={cultureIcon} alt="" />Ponto n° 00{i+1}</p> : <p><img src={cultureIcon} alt="" />Ponto n° 0{i+1}</p>} */}
-              <p><img src={cultureIcon} alt="" />Ponto n° {i+1}</p>
+              {i < 9 ? <p><img src={cultureIcon} alt="" />Ponto n° 00{i+1}</p> : <p><img src={cultureIcon} alt="" />Ponto n° 0{i+1}</p>}
+              {/* <p><img src={cultureIcon} alt="" />Ponto n° {i+1}</p> */}
               <p className="date">Criado em: {marker.date}</p>
             </div>
           )) :

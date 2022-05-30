@@ -26,8 +26,7 @@ const Buttons = () => {
       id: Math.random(),
       position: {lat: center.lat, lng: center.lng},
       date: `${day}/${month}/${year} - ${hours}:${minutes}`,
-      draggable: false,
-      dF: false
+      draggable: false
     }
     dispatch({ type: 'add', marker: marker })
   }

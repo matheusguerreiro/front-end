@@ -11,8 +11,8 @@ const Modal = () => {
   const {dispatch} = useMarker()
   const {show, changeShow, type} = useModal()
 
-  const handleRm = (id) => {
-    dispatch({type: 'rm', marker: id})
+  const handleRm = () => {
+    dispatch({type: 'rm'})
     changeShow()
   }
 

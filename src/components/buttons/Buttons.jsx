@@ -12,20 +12,15 @@ import { useModal } from '../../context/modalContext'
 
 const Buttons = () => {
 
-  const {state, dispatch, center, /* select, setSelect */} = useMarker()
+  const {state, dispatch, center} = useMarker()
   const {changeShow, setType} = useModal()
 
   const handleAdd = () => {
     let today = new Date()
-      let day = (today.getDate()) < 10 ? ('0'+(today.getDate())) : (today.getDate())
-      let month = (today.getMonth()+1) < 10 ? ('0'+(today.getMonth()+1)) : (today.getMonth()+1)
-      let year = today.getFullYear()
-        let hours = today.getHours() < 10 ? ('0'+(today.getHours())) : (today.getHours())
-        let minutes = today.getMinutes() < 10 ? ('0'+(today.getMinutes())) : (today.getMinutes())
     const marker = {
       id: Math.random(),
       position: {lat: center.lat, lng: center.lng},
-      date: `${day}/${month}/${year} - ${hours}:${minutes}`,
+      date: today,
       draggable: false
     }
     dispatch({ type: 'add', marker: marker })
@@ -41,11 +36,7 @@ const Buttons = () => {
     changeShow()
   }
 
-  // queria ter feito assim... mas não deu
-  // state.some((marker) => marker.draggable) ? setSelect(true) : setSelect(false)
-
-  let select = false
-  state.some((marker) => marker.draggable) ? select = true : select = false
+  let select = state.some((marker) => marker.draggable)
 
   return (
     <div className="buttonsDiv">

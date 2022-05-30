@@ -1,5 +1,5 @@
 // hooks
-import { useContext, createContext, useReducer, useState } from "react";
+import { useContext, createContext, useReducer} from "react";
 
 // calculateCenter
 import calculateCenter from '../utils/calculateCenter'
@@ -40,10 +40,9 @@ const center = calculateCenter(polygonCoordinates)
 
 export const MarkerContextProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const [select, setSelect] = useState(false)
 
   return (
-    <MarkerContext.Provider value={{state, dispatch, center, polygonCoordinates, select, setSelect}}>
+    <MarkerContext.Provider value={{state, dispatch, center, polygonCoordinates}}>
       {children}
     </MarkerContext.Provider>
   )
